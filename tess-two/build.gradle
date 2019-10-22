@@ -27,7 +27,7 @@ android {
 
     externalNativeBuild {
         ndkBuild {
-            path "jni/Android.mk"
+            path 'jni/Android.mk'
         }
     }
 }
@@ -50,7 +50,7 @@ task javadoc(type: Javadoc) {
     source = android.sourceSets.main.java.srcDirs
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     options {
-        links "http://docs.oracle.com/javase/7/docs/api/"
+        links 'http://docs.oracle.com/javase/7/docs/api/'
         linksOffline "http://d.android.com/reference","${android.sdkDirectory}/docs/reference"
     }
 }
@@ -96,8 +96,8 @@ install {
 }
 
 bintray {
-    user = properties.getProperty("bintray.user")
-    key = properties.getProperty("bintray.apikey")
+    user = properties.getProperty('bintray.user')
+    key = properties.getProperty('bintray.apikey')
     configurations = ['archives']
     pkg {
         repo = 'maven'
