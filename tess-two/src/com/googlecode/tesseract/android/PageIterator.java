@@ -17,13 +17,13 @@
 package com.googlecode.tesseract.android;
 
 import android.graphics.Rect;
-
+import com.getkeepsafe.relinker.ReLinker;
 import com.googlecode.tesseract.android.TessBaseAPI.PageIteratorLevel;
 
 public class PageIterator {
     static {
-        System.loadLibrary("lept");
-        System.loadLibrary("tess");
+        ReLinker.loadLibrary("lept");
+        ReLinker.loadLibrary("tess");
     }
 
     /** Pointer to native page iterator. */
